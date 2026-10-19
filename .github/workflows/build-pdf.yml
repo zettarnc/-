@@ -2,7 +2,7 @@ name: Build lecture PDFs
 on:
   push:
     branches: [main]
-    paths: ['notes/**', 'evidence/**', 'verify_published.py', 'md_to_pdf.py', 'requirements-pdf.txt', '.github/workflows/build-pdf.yml']
+    paths: ['notes/**', 'evidence/**', 'verify_published.py', 'build_latex.py', 'latex-*.tex', 'latex-*.lua', 'requirements-latex.txt', '.github/workflows/build-pdf.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -14,11 +14,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install PDF tools and CJK font
+      - name: Install LaTeX, Pandoc and open CJK fonts
         run: |
           sudo apt-get update
-          sudo apt-get install -y fonts-wqy-zenhei
-          python -m pip install -r requirements-pdf.txt
+          sudo apt-get install -y --no-install-recommends pandoc texlive-xetex texlive-lang-chinese texlive-latex-extra texlive-fonts-recommended
+          python -m pip install -r requirements-latex.txt
       - name: Validate and render all notes
         shell: bash
         run: |
@@ -30,7 +30,7 @@ jobs:
           for source in notes/*.md; do
             python validate_markdown.py "$source"
             name="$(basename "$source" .md)"
-            python md_to_pdf.py "$source" "output/pdf/$name.pdf"
+            python build_latex.py "$source" "output/pdf/$name.pdf" --engine xelatex
           done
       - uses: actions/upload-artifact@v4
         with:
@@ -38,4 +38,6 @@ jobs:
           path: |
             output/pdf/*.pdf
             output/pdf/*.verification.json
+            output/pdf/*.tex
+            output/pdf/*.log
           if-no-files-found: error
