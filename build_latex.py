@@ -3,6 +3,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 import shutil
 import subprocess
@@ -39,19 +40,22 @@ def build(args):
                     '-V', 'sansfont=TeX Gyre Heros', '-V', 'monofont=Latin Modern Mono',
                     '-V', 'colorlinks=true', '-M', 'title='+title, '-M', 'date=',
                     '--output', str(tex)], check=True)
-    # Pandoc retains relative images; absolute paths keep compilation independent of cwd.
+    # Keep generated TeX portable alongside the repository's notes directory.
     latex = tex.read_text(encoding='utf-8')
+    latex = re.sub(r'(\\includegraphics\[[^\]]*height=8\.5cm)(\])',
+                   r'\1,keepaspectratio\2', latex)
     for image in source.parent.glob('*.jpg'):
-        latex = latex.replace('{'+image.name+'}', '{'+image.resolve().as_posix()+'}')
+        relative = Path(os.path.relpath(image.resolve(), output.parent)).as_posix()
+        latex = latex.replace('{'+image.name+'}', '{'+relative+'}')
     tex.write_text(latex, encoding='utf-8')
     if args.engine == 'tectonic':
         command = [engine, '--keep-logs', '--keep-intermediates', '--outdir', str(output.parent), str(tex)]
-        subprocess.run(command, check=True, cwd=ROOT)
+        subprocess.run(command, check=True, cwd=output.parent)
     else:
         command = [engine, '-interaction=nonstopmode', '-halt-on-error', '-no-shell-escape',
                    '-output-directory='+str(output.parent), str(tex)]
         for _ in range(2):
-            subprocess.run(command, check=True, cwd=ROOT)
+            subprocess.run(command, check=True, cwd=output.parent)
     reader = PdfReader(output)
     if not reader.pages or any(not (page.extract_text() or '').strip() for page in reader.pages):
         raise SystemExit('PDF has empty/unsearchable pages')
