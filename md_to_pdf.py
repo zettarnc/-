@@ -56,7 +56,8 @@ def render(source, destination, font_path):
     base = dict(fontName='LectureCJK', wordWrap='CJK', textColor=colors.HexColor('#20313e'),
                 alignment=TA_LEFT, splitLongWords=True)
     styles = {
-        'body': ParagraphStyle('body', fontSize=10.5, leading=17.5, spaceAfter=8, **base),
+        'body': ParagraphStyle('body', fontSize=10.5, leading=17, spaceAfter=7,
+                               allowWidows=0, allowOrphans=0, **base),
         'title': ParagraphStyle('title', fontSize=23, leading=32, spaceAfter=17, **base),
         'h2': ParagraphStyle('h2', fontSize=15, leading=23, spaceBefore=16, spaceAfter=9,
                              keepWithNext=True, **base),
@@ -64,7 +65,7 @@ def render(source, destination, font_path):
                              keepWithNext=True, **base),
         'cell': ParagraphStyle('cell', fontSize=9, leading=14, **base),
         'code': ParagraphStyle('code', fontSize=8.5, leading=13, spaceAfter=0, **base),
-        'bullet': ParagraphStyle('bullet', fontSize=10.5, leading=17.5, leftIndent=13,
+        'bullet': ParagraphStyle('bullet', fontSize=10.5, leading=17, leftIndent=13,
                                 firstLineIndent=-10, spaceAfter=5, **base),
     }
     width, height = 595.276, 841.89
@@ -137,8 +138,20 @@ def render(source, destination, font_path):
                 raise ValueError(f'Image missing: {image_path}')
             iw, ih = ImageReader(str(image_path)).getSize()
             scale = min(usable / iw, 370 / ih)
-            story.append(KeepTogether([Image(str(image_path), width=iw * scale, height=ih * scale),
-                                      Paragraph(inline(match[1]), styles['cell']), Spacer(1, 10)]))
+            image_block = [Image(str(image_path), width=iw * scale, height=ih * scale),
+                           Paragraph(inline(match[1]), styles['cell'])]
+            caption_index = index + 1
+            while caption_index < len(lines) and not lines[caption_index].strip():
+                caption_index += 1
+            if caption_index < len(lines) and lines[caption_index].strip().startswith('画面证据：'):
+                caption = []
+                while caption_index < len(lines) and lines[caption_index].strip():
+                    caption.append(lines[caption_index].strip())
+                    caption_index += 1
+                image_block.append(Paragraph(inline(' '.join(caption)), styles['cell']))
+                index = caption_index - 1
+            image_block.append(Spacer(1, 10))
+            story.append(KeepTogether(image_block))
         elif re.match(r'^(?:[-*+] |\d+\. )', line):
             content = re.sub(r'^(?:[-*+] |\d+\. )', '', line)
             story.append(Paragraph('· ' + inline(content), styles['bullet']))
