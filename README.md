@@ -20,8 +20,8 @@
 | 全流程文档、任务书、示例讲义 | 已编写 |
 | 示例依据 | 完整原视频、本地窗口字幕、选定画面、官方讲义与公开整理稿 |
 | 本地原视频下载、时间轴与画面核验 | 完整媒体、401 张候选帧、12 张原图审查；结果见 evidence/source-verification.json |
-| PDF | 图文讲义由 ReportLab 导出；检查范围与结果见随附 JSON 记录 |
-| 自动导出 | 提供 build_pdf.ps1、Python 转换器与 GitHub Actions；LaTeX 路线未部署 |
+| PDF | 图文讲义由 LaTeX（ctexart）导出；检查范围与结果见随附 JSON 记录 |
+| 自动导出 | 本地 Tectonic、云端 XeLaTeX；宋体正文与黑体标题，见 [LATEX.md](LATEX.md) |
 | GitHub 目标 | https://github.com/zettarnc/- ，上传结果以远端实际提交为准 |
 
 `prepare.ps1` 是本项目新增的采集脚本，不是上游项目的一键生成入口。正文重组与语义核验需要具备读图能力的 Agent 或人工完成，下载成功不代表讲义可信。

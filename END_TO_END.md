@@ -20,11 +20,11 @@
 
 ## 本地复现
 
-推荐 Python 3.12。在仓库根目录准备依赖与模型：
+推荐 Python 3.12。先按 [LATEX.md](LATEX.md) 安装 Pandoc 和 Tectonic；PDF 已默认使用 LaTeX。在仓库根目录准备依赖与模型：
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements-pdf.txt -r requirements-video.txt
+.\.venv\Scripts\python.exe -m pip install -r requirements-latex.txt -r requirements-video.txt
 .\.venv\Scripts\python.exe download_sensevoice.py work/models
 ```
 

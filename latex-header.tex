@@ -1,0 +1,35 @@
+% Portable CJK typography: ctex + the open Fandol font family.
+\usepackage{geometry}
+\geometry{a4paper,left=24mm,right=24mm,top=25mm,bottom=25mm,headheight=15pt}
+\usepackage{xcolor}
+\definecolor{inkblue}{HTML}{254B62}
+\definecolor{muted}{HTML}{657681}
+\usepackage{setspace}
+\setstretch{1.42}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.38em}
+\setlength{\emergencystretch}{3em}
+\ctexset{
+  section={format=\Large\sffamily\bfseries\color{inkblue},beforeskip=1.7em,afterskip=.8em},
+  subsection={format=\large\sffamily\bfseries\color{inkblue},beforeskip=1.3em,afterskip=.6em}
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\sffamily\color{muted}软件仓库管理 · 南京大学 GSE 2026}
+\fancyhead[R]{\small\sffamily\color{muted}课程讲义}
+\fancyfoot[C]{\small\color{muted}\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage{titling}
+\pretitle{\begin{center}\LARGE\sffamily\bfseries\color{inkblue}}
+\posttitle{\par\end{center}\vskip .8em}
+\predate{\begin{center}}
+\postdate{\end{center}}
+\setlength{\droptitle}{-2em}
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\},fontsize=\small,frame=single,rulecolor=\color{muted},framesep=8pt}
+\hypersetup{colorlinks=true,linkcolor=inkblue,urlcolor=inkblue,bookmarksopen=true}
+\urlstyle{same}
+\widowpenalty=10000
+\clubpenalty=10000

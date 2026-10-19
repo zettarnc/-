@@ -8,3 +8,5 @@ __pycache__/
 *.cookies.txt
 tmp/
 .video-tools/
+
+.latex-tools/

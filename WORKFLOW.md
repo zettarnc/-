@@ -45,7 +45,7 @@ yt-dlp --flat-playlist --print '%(playlist_index)s\t%(title)s' '视频链接'
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements-pdf.txt -r requirements-video.txt
+.\.venv\Scripts\python.exe -m pip install -r requirements-latex.txt -r requirements-video.txt
 ```
 
 检查 Python 下载器与本地媒体依赖：
@@ -195,7 +195,7 @@ python .\validate_markdown.py .\notes\software-repository-management.md
 
 ## 10. PDF 输出分支
 
-本项目已接通 **Markdown → ReportLab → PDF**：运行 `build_pdf.ps1` 即可导出，具体环境、命令和 GitHub 自动构建见 [PDF.md](PDF.md)。当前讲义已补充真实视频配图，图注与时间区间一起排版。这条路线不依赖 XeLaTeX，不运行上游的 `verify_notes.py`；源证据检查和 PDF 版式检查分别报告。
+本项目默认采用 **Markdown → Pandoc → LaTeX（ctexart）→ PDF**，本地使用 Tectonic，云端使用 XeLaTeX。运行 `build_pdf.ps1` 导出，字体和部署说明见 [LATEX.md](LATEX.md)。截图与出处说明保持在同一版面块中；源证据检查和版式检查分别报告。
 
 下面保留上游的 LaTeX 路线，供有公式和更复杂版式的课程使用。
 

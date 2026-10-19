@@ -10,7 +10,7 @@ from pathlib import Path
 from acquire_video import acquire
 from transcribe_sensevoice import transcribe
 from verify_source import verify
-from md_to_pdf import find_font, render
+from build_latex import build
 from validate_markdown import validate
 
 
@@ -36,7 +36,8 @@ def run(args):
     if errors:
         raise SystemExit('\n'.join(errors))
     verify(work, notes, evidence)
-    render(notes, args.output.resolve(), find_font(args.font))
+    build(argparse.Namespace(source=notes, output=args.output, engine=args.engine,
+                             engine_path=args.engine_path, pandoc=args.pandoc))
     print('Source checks and PDF conversion PASS. Render and review every PDF page before publishing.')
 
 
@@ -49,5 +50,7 @@ if __name__ == '__main__':
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--modeldir', type=Path)
     parser.add_argument('--browser', choices=['chrome', 'edge', 'firefox', 'brave'])
-    parser.add_argument('--font')
+    parser.add_argument('--engine', choices=['tectonic', 'xelatex'], default='tectonic')
+    parser.add_argument('--engine-path')
+    parser.add_argument('--pandoc')
     run(parser.parse_args())
