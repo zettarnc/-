@@ -2,7 +2,7 @@ name: Build lecture PDFs
 on:
   push:
     branches: [main]
-    paths: ['notes/**', 'md_to_pdf.py', 'requirements-pdf.txt', '.github/workflows/build-pdf.yml']
+    paths: ['notes/**', 'evidence/**', 'verify_published.py', 'md_to_pdf.py', 'requirements-pdf.txt', '.github/workflows/build-pdf.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -24,6 +24,9 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p output/pdf
+          if [ -f evidence/source-verification.json ]; then
+            python verify_published.py
+          fi
           for source in notes/*.md; do
             python validate_markdown.py "$source"
             name="$(basename "$source" .md)"
