@@ -7,7 +7,7 @@
 \usepackage{setspace}
 \setstretch{1.42}
 \setlength{\parindent}{2em}
-\setlength{\parskip}{0.38em}
+\setlength{\parskip}{0.28em}
 \setlength{\emergencystretch}{3em}
 \ctexset{
   section={format=\Large\sffamily\bfseries\color{inkblue},beforeskip=1.7em,afterskip=.8em},
@@ -27,9 +27,16 @@
 \predate{\begin{center}}
 \postdate{\end{center}}
 \setlength{\droptitle}{-2em}
+\renewcommand{\maketitle}{%
+  \begin{center}
+  {\LARGE\sffamily\bfseries\color{inkblue}\thetitle\par}
+  \vspace{5mm}
+  {\small\sffamily\color{muted}南京大学 · 生成式软件工程 · 第 3 讲}
+  \end{center}\vspace{4mm}\thispagestyle{fancy}}
+\usepackage{needspace}
 \usepackage{fvextra}
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\},fontsize=\small,frame=single,rulecolor=\color{muted},framesep=8pt}
-\hypersetup{colorlinks=true,linkcolor=inkblue,urlcolor=inkblue,bookmarksopen=true}
-\urlstyle{same}
+\AtBeginDocument{\hypersetup{colorlinks=true,linkcolor=inkblue,urlcolor=inkblue,bookmarksopen=true}}
+\AtBeginDocument{\urlstyle{same}}
 \widowpenalty=10000
 \clubpenalty=10000

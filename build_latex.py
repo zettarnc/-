@@ -8,6 +8,7 @@ from pathlib import Path
 import shutil
 import subprocess
 from pypdf import PdfReader
+import pdfplumber
 
 ROOT = Path(__file__).resolve().parent
 
@@ -17,7 +18,9 @@ def find_tool(name, supplied=None):
         candidates.append(ROOT / '.latex-tools/python/pypandoc/files/pandoc.exe')
     for candidate in candidates:
         if candidate and Path(candidate).is_file():
-            return str(Path(candidate).resolve())
+            # xelatex is often a symlink to xetex: preserve argv[0] so the
+            # executable selects the LaTeX format rather than plain XeTeX.
+            return os.path.abspath(candidate)
     raise SystemExit(f'Missing {name}; see LATEX.md for installation.')
 
 def build(args):
@@ -36,8 +39,11 @@ def build(args):
                     '--lua-filter', str(ROOT / 'latex-figures.lua'),
                     '--include-in-header', str(ROOT / 'latex-header.tex'),
                     '-V', 'documentclass=ctexart', '-V', 'classoption=fontset=fandol',
-                    '-V', 'fontsize=11pt', '-V', 'mainfont=TeX Gyre Pagella',
-                    '-V', 'sansfont=TeX Gyre Heros', '-V', 'monofont=Latin Modern Mono',
+                    '-V', 'fontsize=11pt', '-V', 'mainfont=texgyrepagella-regular.otf',
+                    '-V', 'mainfontoptions=BoldFont=texgyrepagella-bold.otf,ItalicFont=texgyrepagella-italic.otf,BoldItalicFont=texgyrepagella-bolditalic.otf',
+                    '-V', 'sansfont=texgyreheros-regular.otf',
+                    '-V', 'sansfontoptions=BoldFont=texgyreheros-bold.otf,ItalicFont=texgyreheros-italic.otf,BoldItalicFont=texgyreheros-bolditalic.otf',
+                    '-V', 'monofont=lmmono10-regular.otf',
                     '-V', 'colorlinks=true', '-M', 'title='+title, '-M', 'date=',
                     '--output', str(tex)], check=True)
     # Keep generated TeX portable alongside the repository's notes directory.
@@ -59,12 +65,19 @@ def build(args):
     reader = PdfReader(output)
     if not reader.pages or any(not (page.extract_text() or '').strip() for page in reader.pages):
         raise SystemExit('PDF has empty/unsearchable pages')
+    with pdfplumber.open(output) as document:
+        extracted = '\n'.join(page.extract_text(y_tolerance=5) or '' for page in document.pages)
+    if re.sub(r'\s+', '', title) not in re.sub(r'\s+', '', extracted):
+        raise SystemExit('PDF is missing a searchable Chinese title')
     report = {
         'engine': args.engine, 'pipeline': 'Pandoc -> LaTeX (ctexart) -> '+args.engine,
         'fonts': {'CJK_body':'FandolSong', 'CJK_headings':'FandolHei', 'Latin_body':'TeX Gyre Pagella'},
         'source_sha256': hashlib.sha256(source.read_bytes()).hexdigest(),
         'pdf_sha256': hashlib.sha256(output.read_bytes()).hexdigest(),
         'pages': len(reader.pages), 'format_check':'PASS', 'visual_review':'pending',
+        'searchable_title': True,
+        'pandoc_version': subprocess.check_output([pandoc, '--version'], text=True).splitlines()[0],
+        'engine_version': subprocess.check_output([engine, '--version'], text=True).splitlines()[0],
         'source_verification_report':'evidence/source-verification.json',
     }
     output.with_suffix('.verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')

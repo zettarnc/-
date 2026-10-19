@@ -1,13 +1,20 @@
 {
-  "source": "software-repository-management.md",
-  "output": "software-repository-management.pdf",
+  "engine": "tectonic",
+  "pipeline": "Pandoc -> LaTeX (ctexart) -> tectonic",
+  "fonts": {
+    "CJK_body": "FandolSong",
+    "CJK_headings": "FandolHei",
+    "Latin_body": "TeX Gyre Pagella"
+  },
   "source_sha256": "b52c10a08d669c3bb3b5e6e7390b4bf3b3758700390d0874accc7d6688b9792a",
-  "pdf_sha256": "b752ffc6e88a9e4327991de5b96524c90de1ab51b0652d69627cc0c5f7812b91",
+  "pdf_sha256": "a790791f0873660ace1f86f16593ab4979f468d47bb34dc87033d4db59a3b980",
   "pages": 14,
-  "searchable_title": true,
   "format_check": "PASS",
   "visual_review": "PASS",
-  "video_evidence_review": "PASS within documented topic-and-figure review scope",
+  "searchable_title": true,
+  "pandoc_version": "pandoc.exe 3.6.1",
+  "engine_version": "Tectonic 0.17.0",
+  "source_verification_report": "evidence/source-verification.json",
   "visual_review_pages": [
     1,
     2,
@@ -24,6 +31,6 @@
     13,
     14
   ],
-  "source_verification_report": "evidence/source-verification.json",
+  "video_evidence_review": "PASS within documented topic-and-figure review scope",
   "source_report_sha256": "c51374efe2c48e7a3f428d0a5a56a875f29f90fdb2ebd3dade617b81fb773544"
 }
