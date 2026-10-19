@@ -20,7 +20,7 @@ function Pandoc(doc)
       end
       blocks:insert(pandoc.RawBlock('latex', '\\end{minipage}\\par\\addvspace{1em}'))
     elseif b.t == 'Header' and pandoc.utils.stringify(b.content) == '来源与许可' then
-      blocks:insert(pandoc.RawBlock('latex', '\\enlargethispage{3\\baselineskip}'))
+      blocks:insert(pandoc.RawBlock('latex', '\\Needspace{12\\baselineskip}'))
       blocks:insert(b)
     elseif b.t == 'Table' then
       blocks:insert(pandoc.RawBlock('latex', '\\Needspace{11\\baselineskip}'))

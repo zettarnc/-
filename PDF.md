@@ -4,12 +4,14 @@
 
 ## 本次成品
 
-- [阅读 PDF](software-repository-management.pdf)
+- [第二讲：提示词与上下文工程（15 页）](prompt-context-engineering.pdf)
+- [第二讲 TeX 源码](prompt-context-engineering.tex) · [检查记录](prompt-context-engineering.verification.json)
+- [第三讲：软件仓库管理（14 页）](software-repository-management.pdf)
 - [编译与检查记录](software-repository-management.verification.json)
 - [讲义 Markdown](notes/software-repository-management.md)
 - [LaTeX 环境、字体与复现命令](LATEX.md)
 
-讲义保留 12 张视频原图和可回查的时间段。原视频、完整音轨转录与主题审查见 [来源记录](evidence/README.md)，与排版引擎无关。
+第二讲保留 14 张视频原图，第三讲保留 12 张，均给出可回查的时间段。原视频、完整音轨转录与主题审查见 [来源记录](evidence/README.md)，与排版引擎无关。
 
 ## 本地与云端
 

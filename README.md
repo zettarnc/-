@@ -12,7 +12,18 @@
 - `prepare.ps1`：下载选定视频及字幕，提取候选画面；不会自动生成讲义。
 - `validate_markdown.py`：检查 Markdown 交付的基本结构、链接与来源记录。
 
-## 本次交付状态
+## 课程讲义
+
+| 讲次 | 主题 | 成品 | 正文与来源 |
+| --- | --- | --- | --- |
+| 第 2 讲 | 提示词与上下文工程 | [LaTeX PDF（15 页）](prompt-context-engineering.pdf) · [TeX 源码](prompt-context-engineering.tex) | [讲义](notes/prompt-context-engineering.md) · [核验记录](evidence/nju-gse-02/README.md) |
+| 第 3 讲 | 软件仓库管理 | [LaTeX PDF（14 页）](software-repository-management.pdf) · [TeX 源码](software-repository-management.tex) | [讲义](notes/software-repository-management.md) · [核验记录](evidence/README.md) |
+
+第二讲完整音轨约 98 分钟，共 296 个连续转录窗口、197 张候选帧、14 张选图和 20 个主题覆盖窗口。PDF 已逐页检查；不声称逐字听写或逐帧全检。
+
+`prepare_lecture02.py` 保存本讲实际使用的帧号、裁剪区域和图注，只适用于这段视频；处理新讲次需要重新选帧和审阅。
+
+## 第三讲示例状态
 
 | 项目 | 状态 |
 | --- | --- |

@@ -1,0 +1,37 @@
+{
+  "engine": "tectonic",
+  "pipeline": "Pandoc -> LaTeX (ctexart) -> tectonic",
+  "fonts": {
+    "CJK_body": "FandolSong",
+    "CJK_headings": "FandolHei",
+    "Latin_body": "TeX Gyre Pagella"
+  },
+  "source_sha256": "045aa4a3e02ecf94e804edc800e85d353aa6edb6a9459c01f62ff576ae849b70",
+  "pdf_sha256": "6b38f93c9ed23e28f226d11145481e2f85f76b1debbae9ba8833442785d44f9a",
+  "pages": 15,
+  "format_check": "PASS",
+  "visual_review": "PASS",
+  "searchable_title": true,
+  "pandoc_version": "pandoc.exe 3.6.1",
+  "engine_version": "Tectonic 0.17.0",
+  "source_verification_report": "evidence/nju-gse-02/source-verification.json",
+  "visual_review_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "video_evidence_review": "PASS within documented topic-and-figure review scope",
+  "source_report_sha256": "a36a5f3fe1f9c37ccde4f4ea0e77331509e6b07b1b18d79205a751f35170b544"
+}

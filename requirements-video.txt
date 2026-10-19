@@ -3,3 +3,4 @@ imageio-ffmpeg==0.6.0
 sherpa-onnx==1.13.8
 av==19.0.1
 numpy==2.5.4
+Pillow==12.3.0
