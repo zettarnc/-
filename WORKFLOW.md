@@ -39,22 +39,20 @@ yt-dlp --flat-playlist --print '%(playlist_index)s\t%(title)s' '视频链接'
 
 ## 3. Windows 环境准备
 
-推荐 Python 3.12 或 3.13、Git、FFmpeg。`prepare.ps1` 依赖 Python 环境中的 `yt-dlp`，以及 PATH 内的 `ffmpeg`、`ffprobe`。
+推荐 Python 3.12 和 Git。当前 `prepare.ps1` 调用 `acquire_video.py`，FFmpeg 由 imageio-ffmpeg 提供，媒体信息由 PyAV 读取，不再依赖系统 PATH 中的 ffmpeg / ffprobe。以下 Windows 步骤对应当前实际运行的入口。
 
 以下是安装步骤，本文档不会自动修改系统环境：
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -U pip yt-dlp
-winget install --id Gyan.FFmpeg -e
+.\.venv\Scripts\python.exe -m pip install -r requirements-pdf.txt -r requirements-video.txt
 ```
 
-安装 FFmpeg 后重新打开终端，再检查：
+检查 Python 下载器与本地媒体依赖：
 
 ```powershell
 .\.venv\Scripts\python.exe -m yt_dlp --version
-ffmpeg -version
-ffprobe -version
+.\.venv\Scripts\python.exe -c "import av, imageio_ffmpeg, sherpa_onnx; print(imageio_ffmpeg.get_ffmpeg_exe())"
 git --version
 ```
 
@@ -72,10 +70,10 @@ git -C vendor/lecture-to-notes checkout 880f11c53c3abf65d01a643d895e04e56344b06f
 在本项目目录运行：
 
 ```powershell
-.\prepare.ps1 -Url 'https://www.bilibili.com/video/BV1kybV6DE47/?p=1' -LectureId 'nju-gse-03'
+.\prepare.ps1 -Url 'https://www.bilibili.com/video/BV1kybV6DE47/?p=1' -LectureId 'nju-gse-03-verified' -Python .\.venv\Scripts\python.exe
 ```
 
-脚本依次完成依赖检查、原始元数据保存、中文字幕或英文字幕请求、视频下载、FFprobe 时长记录，以及每 15 秒一张候选画面。各阶段失败立即停止，已存在的工作目录拒绝覆盖。
+脚本保存原始元数据、视频和音轨，尝试下载字幕，用 PyAV 记录时长与媒体哈希，并每 15 秒抽取候选画面。已经完成的媒体与抽帧可以复用，阶段失败会停止并保留已完成产物。不同视频必须使用不同工作目录，统一入口还会检查 URL 是否对应。
 
 如果需要已有浏览器登录态，可显式传入浏览器名称：
 
@@ -104,7 +102,7 @@ git -C vendor/lecture-to-notes checkout 880f11c53c3abf65d01a643d895e04e56344b06f
 python .\vendor\lecture-to-notes\scripts\check_srt_health.py .\work\nju-gse-03\audio.srt --duration 6014
 ```
 
-没有字幕时，本地 ASR 需要另外安装后端与模型。先阅读上游 `transcribe_whisper.py --help` 或 X ASR 脚本的使用说明，按真实参数运行；模型下载、首次加载与转录耗时分别记录。无进度应检查后端与模型状态，不能把等待当作成功。
+没有字幕时，当前已实测的入口是 `download_sensevoice.py` 和 `transcribe_sensevoice.py`，完整命令见 END_TO_END.md。它在本地处理音轨，不上传音频，SRT 时间标识真实的 20 秒输入窗口，保留未校对原文。Whisper 是可选的其他后端；不要仅为得到一个“字幕文件”而把粗粒度时间戳包装为逐字对齐。
 
 公开整理稿可作辅助来源，但必须保留整理者、原视频、校对状态和许可。没有时间戳的 Markdown 整理稿不能改名伪装成 SRT，不能据此虚构精确视频时间。
 
@@ -197,7 +195,7 @@ python .\validate_markdown.py .\notes\software-repository-management.md
 
 ## 10. PDF 输出分支
 
-本项目已接通 **Markdown → ReportLab → PDF**：运行 `build_pdf.ps1` 即可导出，具体环境、命令和 GitHub 自动构建见 [PDF.md](PDF.md)。当前《软件仓库管理》示例已生成 5 页中文 PDF，逐页视觉检查通过。这条路线不依赖 XeLaTeX，不运行上游的 `verify_notes.py`；它的检查记录与上游门禁分别报告。
+本项目已接通 **Markdown → ReportLab → PDF**：运行 `build_pdf.ps1` 即可导出，具体环境、命令和 GitHub 自动构建见 [PDF.md](PDF.md)。当前讲义已补充真实视频配图，图注与时间区间一起排版。这条路线不依赖 XeLaTeX，不运行上游的 `verify_notes.py`；源证据检查和 PDF 版式检查分别报告。
 
 下面保留上游的 LaTeX 路线，供有公式和更复杂版式的课程使用。
 
@@ -252,7 +250,7 @@ git push -u origin codex/lecture-notes-workflow
 
 已完成：参考资料阅读、上游版本和 CLI 参数核对、本流程文档、采集脚本、Markdown 基础检查器、课程示例讲义。
 
-PDF 更新：Markdown 导出、本地生成入口已实际运行，5 页示例全部页面视觉检查通过，并提供 GitHub Actions 自动构建配置。未完成的是原视频完整采集、原始时间轴字幕导出、逐图核验和上游 LaTeX 生产门禁，不能称为完成端到端视频验证。用户指定的上传目标为 https://github.com/zettarnc/- ，是否已发布以该仓库的实际提交为准。
+视频来源核验与 PDF 更新：本节课完整音视频、401 张候选帧、本地窗口字幕、12 张配图和逐 5 分钟主题覆盖记录由当前流程生成并审查。具体结果以 `evidence/source-verification.json` 和 PDF 检查报告为准。未执行的是上游 LaTeX 生产门禁；本项目不将自己的 PASS 冒充上游 PASS，也不声称逐字或逐帧全检。用户指定的上传目标为 https://github.com/zettarnc/- 。
 
 常见阻塞：B 站 412 或无字幕先查提取器版本与登录态；Python 安装报代理错误先修网络；浏览器已登录但下载器不可用时检查是否同一浏览器配置；没有可用字幕也没有 ASR 时明确停止完整讲义验收，不用网页摘要顶替原视频证据。
 

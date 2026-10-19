@@ -8,7 +8,7 @@
 - [生成与检查记录](software-repository-management.verification.json)
 - [讲义 Markdown](notes/software-repository-management.md)
 
-本次文件共 5 页，中文可搜索，已将全部页面渲染为图片并逐页检查。原始视频完整采集与逐图证据核验尚未完成；PDF 的格式检查通过并不改变这一来源限制。
+本次更新为带 12 张视频原图的讲义，中文可搜索；最终页数和 PDF 检查结果见随附 JSON。原视频完整采集、窗口转录及主题覆盖审查结果另见 evidence/source-verification.json，它们与 PDF 格式检查是独立的检查项。
 
 仓库根目录提供本次核验后的成品；本地脚本和 Actions 后续生成的文件位于 `output/pdf/`。
 
@@ -52,7 +52,7 @@ Ubuntu 可以安装 `fonts-wqy-zenhei`，转换器会自动识别其默认字体
 
 自动构建只需要仓库只读权限，不写回分支、不调用模型、不读取浏览器登录态。它把已经写好的讲义自动排版，不会从视频自动写出新讲义。视频采集及证据核验按 WORKFLOW.md 执行，正文写作使用 TASK.md。
 
-自动报告保留 `visual_review: pending`，因为脚本不会假装自己做过视觉审查。本次随仓库提供的 PDF 已另行完成全部 5 页的人工视觉核验，故其交付记录标注为 PASS。未来每次新构建应重新检查页面。
+自动报告保留 `visual_review: pending`，因为脚本不会假装自己做过视觉审查。本次随仓库提供的 PDF 会在逐页审查后将相应交付记录标注为 PASS。未来每次新构建应重新检查页面。
 
 ## 支持范围与限制
 

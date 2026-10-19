@@ -1,19 +1,29 @@
 {
   "source": "software-repository-management.md",
   "output": "software-repository-management.pdf",
-  "source_sha256": "1c6c4c93b1279d5f0f1f289c1358731c4bfdebe760e130d09b862b189cb3a110",
-  "pdf_sha256": "ead7efa5987082bd05ec0355258fc551099fb30b2026c5ac516c62f053c2a9e1",
-  "pages": 5,
+  "source_sha256": "b52c10a08d669c3bb3b5e6e7390b4bf3b3758700390d0874accc7d6688b9792a",
+  "pdf_sha256": "b752ffc6e88a9e4327991de5b96524c90de1ab51b0652d69627cc0c5f7812b91",
+  "pages": 14,
   "searchable_title": true,
   "format_check": "PASS",
   "visual_review": "PASS",
-  "video_evidence_review": "not_performed_by_this_converter",
+  "video_evidence_review": "PASS within documented topic-and-figure review scope",
   "visual_review_pages": [
     1,
     2,
     3,
     4,
-    5
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
   ],
-  "visual_review_method": "All PDF pages rendered using Poppler and inspected for Chinese glyphs, clipping, tables, code, headers and footers"
+  "source_verification_report": "evidence/source-verification.json",
+  "source_report_sha256": "c51374efe2c48e7a3f428d0a5a56a875f29f90fdb2ebd3dade617b81fb773544"
 }
