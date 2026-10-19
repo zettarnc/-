@@ -1,0 +1,15 @@
+{
+  "notes_sha256": "045aa4a3e02ecf94e804edc800e85d353aa6edb6a9459c01f62ff576ae849b70",
+  "raw_subtitle_sha256": "4174b19d55383449801b727ace0da2de6410058fcd8097d8016e6d4ba053611b",
+  "topic_review": "PASS",
+  "scope": "Agent read the raw transcript across all 20 five-minute windows, inspected 40 contact-sheet samples and opened all 14 included source crops. Full 5905.536-second video/audio captured and complete contiguous 20-second audio windows transcribed. This is a topic-and-figure audit, not word-by-word acoustic or every-frame visual verification.",
+  "judgments": [
+    "Prompt, context and security mechanisms are presented as classroom explanations, not a current universal product specification.",
+    "Raw English-name/technical-term recognition errors were preserved in SRT; notes use terminology checked against actual slides and official lecture.",
+    "Research section revised after listening-window transcript review: lecturer identified a task-framing bias toward proving method A useful and discussed real tools/search traces; slide-listed alternative mechanisms remain hypotheses.",
+    "The 99%/1%/10% example is a classroom estimate; 0.1% is an explicitly labeled editorial serial-time calculation, not reported experimental data.",
+    "The eighteen-character example is attributed to the official lecture and not presented as a verbatim ASR quote.",
+    "Future compute-concentration scenario and model ability observations remain attributed opinions or scenarios.",
+    "Screenshot crops were checked for visible content; no independent reproduction of the software or scholarly review demonstrations."
+  ]
+}

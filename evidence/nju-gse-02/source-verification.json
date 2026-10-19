@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "source_url": "https://www.bilibili.com/video/BV1CQt365EzW/?p=1",
+  "title": "提示词工程 [02-Raw/26生成式软件工程/NJU]",
+  "duration_seconds": 5905.536,
+  "media": [
+    {
+      "file": "video.mp4",
+      "bytes": 142811502,
+      "sha256": "b08be4af5210abca6c582af787106c790f338e341bdb9a2a264f0cad16ef35ee",
+      "duration": 5905.533313,
+      "streams": [
+        {
+          "type": "video",
+          "codec": "libdav1d",
+          "width": 1280,
+          "height": 410
+        }
+      ]
+    },
+    {
+      "file": "audio.m4a",
+      "bytes": 92859529,
+      "sha256": "986c504f2896da0bd450ef4b3e867f999aeaa5503c995f5688051eaaa9cc4066",
+      "duration": 5905.536,
+      "streams": [
+        {
+          "type": "audio",
+          "codec": "aac"
+        }
+      ]
+    }
+  ],
+  "frame_count": 197,
+  "sample_interval_seconds": 30,
+  "transcription_backend": "sherpa-onnx SenseVoice",
+  "transcription_windows": 296,
+  "last_audio_window_end": 5905.536,
+  "timestamp_precision": "actual 20-second audio windows, not word-level timings",
+  "timeline_review_windows": 20,
+  "reviewed_figures": 14,
+  "notes_sha256": "045aa4a3e02ecf94e804edc800e85d353aa6edb6a9459c01f62ff576ae849b70",
+  "raw_subtitle_sha256": "4174b19d55383449801b727ace0da2de6410058fcd8097d8016e6d4ba053611b",
+  "notes_file": "prompt-context-engineering.md",
+  "review_scope": "Agent read the raw transcript across all 20 five-minute windows, inspected 40 contact-sheet samples and opened all 14 included source crops. Full 5905.536-second video/audio captured and complete contiguous 20-second audio windows transcribed. This is a topic-and-figure audit, not word-by-word acoustic or every-frame visual verification.",
+  "limitations": [
+    "Not a word-by-word acoustic audit",
+    "Not an inspection of every video frame",
+    "Classroom software demonstrations were not independently reproduced"
+  ]
+}

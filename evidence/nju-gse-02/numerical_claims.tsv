@@ -1,0 +1,6 @@
+claim	classification	check	status
+5905.536 seconds / displayed 1:38:26	media metadata	Audio and video durations agree within 1 second	reviewed
+197 candidate frames / 30-second intervals	extraction metadata	Frame list and acquisition report	reviewed
+18 Chinese characters in the three-dot-water example	official lecture sample	Counted excluding punctuation; wording attributed to the official lecture	reviewed
+99% + 1%; 10% local improvement -> 0.1% total time reduction	classroom estimate plus editorial calculation	Serial additive time, other portion fixed; not experimental measurements	reviewed
+14 included figures / 20 timeline windows	review scope	Cross-checked figure manifest and coverage table	reviewed

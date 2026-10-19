@@ -1,0 +1,41 @@
+{
+  "source_url": "https://www.bilibili.com/video/BV1CQt365EzW/?p=1",
+  "video_id": "BV1CQt365EzW_p1",
+  "title": "提示词工程 [02-Raw/26生成式软件工程/NJU]",
+  "uploader": "绿导师原谅你了",
+  "duration_seconds": 5905.536,
+  "media": [
+    {
+      "file": "video.mp4",
+      "bytes": 142811502,
+      "sha256": "b08be4af5210abca6c582af787106c790f338e341bdb9a2a264f0cad16ef35ee",
+      "duration": 5905.533313,
+      "streams": [
+        {
+          "type": "video",
+          "codec": "libdav1d",
+          "width": 1280,
+          "height": 410
+        }
+      ]
+    },
+    {
+      "file": "audio.m4a",
+      "bytes": 92859529,
+      "sha256": "986c504f2896da0bd450ef4b3e867f999aeaa5503c995f5688051eaaa9cc4066",
+      "duration": 5905.536,
+      "streams": [
+        {
+          "type": "audio",
+          "codec": "aac"
+        }
+      ]
+    }
+  ],
+  "sample_interval_seconds": 30,
+  "frame_count": 197,
+  "subtitle_candidates": [],
+  "subtitle_download_error": null,
+  "source_acquisition": "PASS",
+  "semantic_review": "pending"
+}

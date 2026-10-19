@@ -1,0 +1,240 @@
+[
+  {
+    "figure": "pce_context.jpg",
+    "frame": "frame_00006.jpg",
+    "start": 150,
+    "end": 180,
+    "topic": "上下文组成与条件生成",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "6023b9550b5ac187ac5e906c3247bafc9674628297dc686eb781231583ff887e",
+    "source_frame_sha256": "0f4bf9050fa024906c710aca06a25ecd35739707bfe1abb4e46870e5085b4c95",
+    "visual_review": "PASS",
+    "review_method": "Opened selected source crop and checked the actual visible content against its caption and notes; timestamp identifies a 30-second extraction interval."
+  },
+  {
+    "figure": "pce_safety.jpg",
+    "frame": "frame_00026.jpg",
+    "start": 750,
+    "end": 780,
+    "topic": "模型、外围系统与操作系统的分工",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "b1f099922723263a64969b92b5f6fe40cc243c70be6c54f1c906627118aa0d67",
+    "source_frame_sha256": "4c8c0606309c9da02ec22d59a35ac4c02a2e36704d330bd32718c31205ad3941",
+    "visual_review": "PASS",
+    "review_method": "Opened selected source crop and checked the actual visible content against its caption and notes; timestamp identifies a 30-second extraction interval."
+  },
+  {
+    "figure": "pce_learning.jpg",
+    "frame": "frame_00021.jpg",
+    "start": 600,
+    "end": 630,
+    "topic": "用复述与追问暴露理解缺口",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "c0702e997f70da9625c10ca8ce8eaa2e5e03dc4f5d51b455e5ce2585c92fbcfc",
+    "source_frame_sha256": "e8ed6a5fb3500eba09318092e0869d0e2e2f8bd79a9f1a29402366e916087d37",
+    "visual_review": "PASS",
+    "review_method": "Opened selected source crop and checked the actual visible content against its caption and notes; timestamp identifies a 30-second extraction interval."
+  },
+  {
+    "figure": "pce_completion.jpg",
+    "frame": "frame_00051.jpg",
+    "start": 1500,
+    "end": 1530,
+    "topic": "明确要求与显式失败",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "dbca044706547d69c2ca8650d035688772da7903888c80d45aafbd415e747198",
+    "source_frame_sha256": "a5653018c8e3cdbd3ccdf846bedbed7e2fa887a681c343e8d3009238d2f15253",
+    "visual_review": "PASS",
+    "review_method": "Opened selected source crop and checked the actual visible content against its caption and notes; timestamp identifies a 30-second extraction interval."
+  },
+  {
+    "figure": "pce_depth.jpg",
+    "frame": "frame_00071.jpg",
+    "start": 2100,
+    "end": 2130,
+    "topic": "利用上下文和 token 延展推理",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "cd929595be3ae473daa7be702938217ab51808422fc6ee4cac49b9c86d3694cc",
+    "source_frame_sha256": "6ae64e6ca0d5e00be39391b49def50f3aa50355483cffeffa5582bb6929427df",
+    "visual_review": "PASS",
+    "review_method": "Opened selected source crop and checked the actual visible content against its caption and notes; timestamp identifies a 30-second extraction interval."
+  },
+  {
+    "figure": "pce_verifier.jpg",
+    "frame": "frame_00091.jpg",
+    "start": 2700,
+    "end": 2730,
+    "topic": "形式验证与质量评价的边界",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "9403acd1b9deb010b74a8c6b4c38141ba9112d318de7f19962fe3b2472229364",
+    "source_frame_sha256": "d53ab5b40d3b1ac030e7cfc10e8ef0ee5a186c99489bc58206b7b63af7018a7c",
+    "visual_review": "PASS",
+    "review_method": "Opened selected source crop and checked the actual visible content against its caption and notes; timestamp identifies a 30-second extraction interval."
+  },
+  {
+    "figure": "pce_attention.jpg",
+    "frame": "frame_00106.jpg",
+    "start": 3150,
+    "end": 3180,
+    "topic": "规则副作用与按需加载",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "aa43f1990848704bfe13056e09d51a05c9310264542a7fe7cceb3716697da67f",
+    "source_frame_sha256": "c65e57083d7a015fbf1d577a07ed01a047287c9fd4a2cd64aa4879fadf645328",
+    "visual_review": "PASS",
+    "review_method": "Opened selected source crop and checked the actual visible content against its caption and notes; timestamp identifies a 30-second extraction interval."
+  },
+  {
+    "figure": "pce_review.jpg",
+    "frame": "frame_00141.jpg",
+    "start": 4200,
+    "end": 4230,
+    "topic": "三条独立的审稿路线",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "a99fc5b2b8fd22fea2924f0fbb52fc6d42a9d03f81cd4e4ad549882797d8f523",
+    "source_frame_sha256": "5529144446e4b3acd6b8322483e9d0f64e63a0fbad8775b7a3207f4366e438f6",
+    "visual_review": "PASS",
+    "review_method": "Opened selected source crop and checked the actual visible content against its caption and notes; timestamp identifies a 30-second extraction interval."
+  },
+  {
+    "figure": "pce_skills.jpg",
+    "frame": "frame_00151.jpg",
+    "start": 4500,
+    "end": 4530,
+    "topic": "把成功方法沉淀为 Skill",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "50daa5bd55f03f6ef4eb5443ff60935f33f7086fd1fd48744cca8b9499a77e48",
+    "source_frame_sha256": "9fe20b88344f13d445dbaa0713be945d12c2ae3962bb815b328b5d0410c74dff",
+    "visual_review": "PASS",
+    "review_method": "Opened selected source crop and checked the actual visible content against its caption and notes; timestamp identifies a 30-second extraction interval."
+  },
+  {
+    "figure": "pce_codebase.jpg",
+    "frame": "frame_00156.jpg",
+    "start": 4650,
+    "end": 4680,
+    "topic": "代码库的上下文与自由度",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "d09fbdf3fc5d036c3891d5edcb894c3d5ecae071869adc0710ec2431d319f553",
+    "source_frame_sha256": "5938b2004653d82798b14533400f1004bf53d29edbee51a78ca3876d0e4a4b4e",
+    "visual_review": "PASS",
+    "review_method": "Opened selected source crop and checked the actual visible content against its caption and notes; timestamp identifies a 30-second extraction interval."
+  },
+  {
+    "figure": "pce_research.jpg",
+    "frame": "frame_00176.jpg",
+    "start": 5250,
+    "end": 5280,
+    "topic": "研究失败与反馈分辨率",
+    "crop": [
+      550,
+      0,
+      1280,
+      378
+    ],
+    "sha256": "678b284882d0776cdff9b90f7d575a7ea2e8706c372109bddb31803693aa21ca",
+    "source_frame_sha256": "4910b57ce7b9ba1d3394927cd1f53abd39108fcfcbb201b4f17c8685e10c394d",
+    "visual_review": "PASS",
+    "review_method": "Opened selected source crop and checked the actual visible content against its caption and notes; timestamp identifies a 30-second extraction interval."
+  },
+  {
+    "figure": "pce_human.jpg",
+    "frame": "frame_00181.jpg",
+    "start": 5400,
+    "end": 5430,
+    "topic": "少干预与整体吞吐量",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "9d0c0c8f094885a5ee7b6a585380115068239c8312a329dc90493435458f699d",
+    "source_frame_sha256": "b5d6da6d99dafb170468e39d85ecf4df8338eda6649a47fbe76a2c1ab40d0568",
+    "visual_review": "PASS",
+    "review_method": "Opened selected source crop and checked the actual visible content against its caption and notes; timestamp identifies a 30-second extraction interval."
+  },
+  {
+    "figure": "pce_exploration.jpg",
+    "frame": "frame_00191.jpg",
+    "start": 5700,
+    "end": 5730,
+    "topic": "用多样化候选扩大探索",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "d8e19d6f933694a72baeffc30f6495ae8a557db15cef645a8a250b35a8be1004",
+    "source_frame_sha256": "51236fad021aaf4b884082c8058ce3b0a29501fb423e36b25878abbde08d534e",
+    "visual_review": "PASS",
+    "review_method": "Opened selected source crop and checked the actual visible content against its caption and notes; timestamp identifies a 30-second extraction interval."
+  },
+  {
+    "figure": "pce_future.jpg",
+    "frame": "frame_00196.jpg",
+    "start": 5850,
+    "end": 5880,
+    "topic": "算力集中与未来可能性",
+    "crop": [
+      550,
+      0,
+      1280,
+      280
+    ],
+    "sha256": "7b25b9b3a5de357fcc557aad02faa5fc9da51827496aae731b6d4e1dc4a425d4",
+    "source_frame_sha256": "a0b0645ea30d3173807bb2ee4d39d647fdb0215db5f80fd2e098cc54a3263ee8",
+    "visual_review": "PASS",
+    "review_method": "Opened selected source crop and checked the actual visible content against its caption and notes; timestamp identifies a 30-second extraction interval."
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "backend": "sherpa-onnx SenseVoice",
+  "model": "sherpa-onnx-sense-voice-zh-en-ja-ko-yue-int8-2024-07-17",
+  "model_sha256": "c71f0ce00bec95b07744e116345e33d8cbbe08cef896382cf907bf4b51a2cd51",
+  "audio_duration": 5905.536,
+  "segments": 296,
+  "nonempty_segments": 296,
+  "last_segment_end": 5905.536,
+  "elapsed_seconds": 971.94,
+  "audio_sha256": "986c504f2896da0bd450ef4b3e867f999aeaa5503c995f5688051eaaa9cc4066",
+  "transcription_status": "completed",
+  "semantic_review": "pending",
+  "timestamp_precision": "actual 20-second audio windows, not word-level timings"
+}

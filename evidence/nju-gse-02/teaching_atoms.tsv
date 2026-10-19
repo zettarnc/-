@@ -1,0 +1,15 @@
+atom	status	evidence
+上下文组成与条件生成	covered	150–180s; pce_context.jpg
+模型、外围系统与操作系统的分工	covered	750–780s; pce_safety.jpg
+用复述与追问暴露理解缺口	covered	600–630s; pce_learning.jpg
+明确要求与显式失败	covered	1500–1530s; pce_completion.jpg
+利用上下文和 token 延展推理	covered	2100–2130s; pce_depth.jpg
+形式验证与质量评价的边界	covered	2700–2730s; pce_verifier.jpg
+规则副作用与按需加载	covered	3150–3180s; pce_attention.jpg
+三条独立的审稿路线	covered	4200–4230s; pce_review.jpg
+把成功方法沉淀为 Skill	covered	4500–4530s; pce_skills.jpg
+代码库的上下文与自由度	covered	4650–4680s; pce_codebase.jpg
+研究失败与反馈分辨率	covered	5250–5280s; pce_research.jpg
+少干预与整体吞吐量	covered	5400–5430s; pce_human.jpg
+用多样化候选扩大探索	covered	5700–5730s; pce_exploration.jpg
+算力集中与未来可能性	covered	5850–5880s; pce_future.jpg
