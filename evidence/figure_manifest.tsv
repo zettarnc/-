@@ -1,0 +1,13 @@
+figure	frame	start	end	topic	panel
+fig_project.jpg	frame_00041.jpg	600	615	项目目录与可交付产物	measured-slide-panel
+fig_learning.jpg	frame_00091.jpg	1350	1365	先在脑中实现再比较	measured-slide-panel
+fig_init.jpg	frame_00151.jpg	2250	2265	git add 后的暂存区与 git status	measured-slide-panel
+fig_commit_review.jpg	frame_00161.jpg	2400	2415	提交说明与工程实践检查	measured-slide-panel
+fig_exclude.jpg	frame_00231.jpg	3450	3465	不应混入仓库的文件与例外	measured-slide-panel
+fig_rule_name.jpg	frame_00241.jpg	3600	3615	规则标识的大小写选择	measured-slide-panel
+fig_git_visual.jpg	frame_00291.jpg	4350	4365	真实仓库的 Git 对象可视化	measured-slide-panel
+fig_merge_visual.jpg	frame_00311.jpg	4650	4665	分支与合并关系演示	measured-slide-panel
+fig_playground.jpg	frame_00331.jpg	4950	4965	面向儿童的编程可视化	measured-slide-panel
+fig_best_practice.jpg	frame_00361.jpg	5400	5415	可恢复、可理解的提交	measured-slide-panel
+fig_atomic.jpg	frame_00381.jpg	5700	5715	原子变更推进项目	measured-slide-panel
+fig_future.jpg	frame_00401.jpg	6000	6013.205	Agent 产能增长后的版本管理问题	measured-slide-panel

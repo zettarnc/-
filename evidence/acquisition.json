@@ -1,0 +1,42 @@
+{
+  "source_url": "https://www.bilibili.com/video/BV1kybV6DE47/?p=1",
+  "video_id": "BV1kybV6DE47_p1",
+  "title": "软件仓库管理 [03-Raw/26生成式软件工程/NJU]",
+  "uploader": "绿导师原谅你了",
+  "duration_seconds": 6013.205,
+  "media": [
+    {
+      "file": "video.mp4",
+      "bytes": 112317702,
+      "sha256": "2930e8a82f789db4e4310fba9904855bc2bfe87913465031ff0ff1783793f554",
+      "duration": 6013.2,
+      "streams": [
+        {
+          "type": "video",
+          "codec": "libdav1d",
+          "width": 1280,
+          "height": 410
+        }
+      ]
+    },
+    {
+      "file": "audio.m4a",
+      "bytes": 49378713,
+      "sha256": "5c0695c1415bd445dd37929675d2b19c6390c436693ae265cabec21728a48d03",
+      "duration": 6013.205333,
+      "streams": [
+        {
+          "type": "audio",
+          "codec": "aac"
+        }
+      ]
+    }
+  ],
+  "sample_interval_seconds": 15,
+  "frame_count": 401,
+  "subtitle_candidates": [],
+  "subtitle_download_error": null,
+  "source_acquisition": "PASS",
+  "semantic_review": "pending",
+  "title_note": "Display title normalized to UTF-8 from the source page; media hashes unchanged."
+}

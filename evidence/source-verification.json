@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "source_url": "https://www.bilibili.com/video/BV1kybV6DE47/?p=1",
+  "title": "软件仓库管理 [03-Raw/26生成式软件工程/NJU]",
+  "duration_seconds": 6013.205,
+  "media": [
+    {
+      "file": "video.mp4",
+      "bytes": 112317702,
+      "sha256": "2930e8a82f789db4e4310fba9904855bc2bfe87913465031ff0ff1783793f554",
+      "duration": 6013.2,
+      "streams": [
+        {
+          "type": "video",
+          "codec": "libdav1d",
+          "width": 1280,
+          "height": 410
+        }
+      ]
+    },
+    {
+      "file": "audio.m4a",
+      "bytes": 49378713,
+      "sha256": "5c0695c1415bd445dd37929675d2b19c6390c436693ae265cabec21728a48d03",
+      "duration": 6013.205333,
+      "streams": [
+        {
+          "type": "audio",
+          "codec": "aac"
+        }
+      ]
+    }
+  ],
+  "frame_count": 401,
+  "sample_interval_seconds": 15,
+  "transcription_backend": "sherpa-onnx SenseVoice",
+  "transcription_windows": 301,
+  "last_audio_window_end": 6013.2053125,
+  "timestamp_precision": "actual 20-second audio windows, not word-level timings",
+  "timeline_review_windows": 21,
+  "reviewed_figures": 12,
+  "notes_sha256": "b52c10a08d669c3bb3b5e6e7390b4bf3b3758700390d0874accc7d6688b9792a",
+  "raw_subtitle_sha256": "72698b10d62e49c2be1b300f448ffc7bf29d100bc818d967845f80674813248d",
+  "review_scope": "Agent compared transcript topics across all 21 five-minute windows with the notes, inspected 41 contact-sheet samples and opened all 12 included cropped source figures. Full 6013.205-second media was captured; ASR processed every contiguous 20-second window. No word-by-word acoustic audit or every-frame visual audit.",
+  "limitations": [
+    "Not a word-by-word acoustic audit",
+    "Not an inspection of every video frame",
+    "Classroom software demonstrations were not independently reproduced"
+  ],
+  "title_note": "Display title normalized to UTF-8 from the source page; media hashes unchanged."
+}

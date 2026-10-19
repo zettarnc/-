@@ -1,0 +1,206 @@
+[
+  {
+    "figure": "fig_project.jpg",
+    "frame": "frame_00041.jpg",
+    "start": 600,
+    "end": 615,
+    "topic": "项目目录与可交付产物",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "06dc984393fd6d3242d4e59c02d7c71229a0c3072cb4f89f50d826992520324b",
+    "source_frame_sha256": "c817d7aefa4496b1b98f3710e18606717783443ab5f65ce1fdc611e71fe42d45",
+    "visual_review": "PASS",
+    "review_method": "Agent opened the cropped source image and checked its content against the adjacent notes; sampling time is a 15-second interval."
+  },
+  {
+    "figure": "fig_learning.jpg",
+    "frame": "frame_00091.jpg",
+    "start": 1350,
+    "end": 1365,
+    "topic": "先在脑中实现再比较",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "91caa26d505ec7a3698f96da5cb2ce1fb6b797aadbcacfa2812b99e3eb109968",
+    "source_frame_sha256": "d71a0e72222cafbcdb06af0dab3d58498594ef0c9952c1b0cc4b48cb6bebbf87",
+    "visual_review": "PASS",
+    "review_method": "Agent opened the cropped source image and checked its content against the adjacent notes; sampling time is a 15-second interval."
+  },
+  {
+    "figure": "fig_init.jpg",
+    "frame": "frame_00151.jpg",
+    "start": 2250,
+    "end": 2265,
+    "topic": "git add 后的暂存区与 git status",
+    "crop": [
+      550,
+      0,
+      915,
+      205
+    ],
+    "sha256": "721d4e0a8b5d4a9592d6c5fe85d39b4304543127714805821a671426b103afe5",
+    "source_frame_sha256": "f833412c927a61f189ad9a3644d3c9069762fe4284d2cac80aba4aa49824ddab",
+    "visual_review": "PASS",
+    "review_method": "Agent opened the cropped source image and checked its content against the adjacent notes; sampling time is a 15-second interval."
+  },
+  {
+    "figure": "fig_commit_review.jpg",
+    "frame": "frame_00161.jpg",
+    "start": 2400,
+    "end": 2415,
+    "topic": "提交说明与工程实践检查",
+    "crop": [
+      550,
+      0,
+      915,
+      410
+    ],
+    "sha256": "76b193c55352a001c38d46b0acfe72e71b81c8645e333e334b9aae3200f4d634",
+    "source_frame_sha256": "9ffa3dae5600fe37bb7dedb49bc93a46075fc770e36ce0cabfbdc3ebdc04e4db",
+    "visual_review": "PASS",
+    "review_method": "Agent opened the cropped source image and checked its content against the adjacent notes; sampling time is a 15-second interval."
+  },
+  {
+    "figure": "fig_exclude.jpg",
+    "frame": "frame_00231.jpg",
+    "start": 3450,
+    "end": 3465,
+    "topic": "不应混入仓库的文件与例外",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "76bca2bd8ba13562e48c448dcdcb30a17c4413187d7f462fca675be0459d988b",
+    "source_frame_sha256": "9150634fdbc620ba9818ebaadafb6170885a060287d1e732770d16577bb8eb3d",
+    "visual_review": "PASS",
+    "review_method": "Agent opened the cropped source image and checked its content against the adjacent notes; sampling time is a 15-second interval."
+  },
+  {
+    "figure": "fig_rule_name.jpg",
+    "frame": "frame_00241.jpg",
+    "start": 3600,
+    "end": 3615,
+    "topic": "规则标识的大小写选择",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "ef15b7b95ed4df3e85bb857f167f049456796f980af82026087877a31d8948a5",
+    "source_frame_sha256": "e806262ac5dda86b682da9875ba9972a0eef4a4d184a35e5ae014b6df3ebe0ab",
+    "visual_review": "PASS",
+    "review_method": "Agent opened the cropped source image and checked its content against the adjacent notes; sampling time is a 15-second interval."
+  },
+  {
+    "figure": "fig_git_visual.jpg",
+    "frame": "frame_00291.jpg",
+    "start": 4350,
+    "end": 4365,
+    "topic": "真实仓库的 Git 对象可视化",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "b97a891a3dc9637580bf9f9baabad0ed53bcc8eb245667ca0608df072810d97b",
+    "source_frame_sha256": "292e163f9056ba7665ca5026582ac315e85476780492400deeb52e4401bec3a7",
+    "visual_review": "PASS",
+    "review_method": "Agent opened the cropped source image and checked its content against the adjacent notes; sampling time is a 15-second interval."
+  },
+  {
+    "figure": "fig_merge_visual.jpg",
+    "frame": "frame_00311.jpg",
+    "start": 4650,
+    "end": 4665,
+    "topic": "分支与合并关系演示",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "7cceff62bd856372d86f5ee1346d9b23ef204fbfcb4e632854a9853bc5c42ea8",
+    "source_frame_sha256": "23c61a2e39a30d5f38e62ca249361fd3581f65877ddebab555816d3c049aa414",
+    "visual_review": "PASS",
+    "review_method": "Agent opened the cropped source image and checked its content against the adjacent notes; sampling time is a 15-second interval."
+  },
+  {
+    "figure": "fig_playground.jpg",
+    "frame": "frame_00331.jpg",
+    "start": 4950,
+    "end": 4965,
+    "topic": "面向儿童的编程可视化",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "7b4a5a7fbc4a7ed78bd3a528a7885f785894e15858d90abc118128f09b13d3f0",
+    "source_frame_sha256": "799325b83d5fe7adaa2794879f6d3178f24e9e51b00d2f301d690fa97e94553f",
+    "visual_review": "PASS",
+    "review_method": "Agent opened the cropped source image and checked its content against the adjacent notes; sampling time is a 15-second interval."
+  },
+  {
+    "figure": "fig_best_practice.jpg",
+    "frame": "frame_00361.jpg",
+    "start": 5400,
+    "end": 5415,
+    "topic": "可恢复、可理解的提交",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "2b3bb77aa0cd3b9452a936025ad0a3777dd7172d0af5ba80f55700b23659eef2",
+    "source_frame_sha256": "b09a453705e5aec27eb5a7f50ff61b96bfc51d760cf85a6c0bd52fc8e47d686d",
+    "visual_review": "PASS",
+    "review_method": "Agent opened the cropped source image and checked its content against the adjacent notes; sampling time is a 15-second interval."
+  },
+  {
+    "figure": "fig_atomic.jpg",
+    "frame": "frame_00381.jpg",
+    "start": 5700,
+    "end": 5715,
+    "topic": "原子变更推进项目",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "dc56721b3892c4922506c80078340285306078d6fcc17001e60fcb7afb74e014",
+    "source_frame_sha256": "13ec6f6b175a85dd33e9d7be747ad65f15965b2c9a437bd9eabcee7e29f7f0c0",
+    "visual_review": "PASS",
+    "review_method": "Agent opened the cropped source image and checked its content against the adjacent notes; sampling time is a 15-second interval."
+  },
+  {
+    "figure": "fig_future.jpg",
+    "frame": "frame_00401.jpg",
+    "start": 6000,
+    "end": 6013.205,
+    "topic": "Agent 产能增长后的版本管理问题",
+    "crop": [
+      550,
+      0,
+      1280,
+      410
+    ],
+    "sha256": "8768856ce6b5aa98d86686f9afba9e6500f67609eb32b050edf6386c356d4ad5",
+    "source_frame_sha256": "832dd85d0692b3ed10681c1c4a94ff3ae062c3019e08a0276155b29d0ae33184",
+    "visual_review": "PASS",
+    "review_method": "Agent opened the cropped source image and checked its content against the adjacent notes; sampling time is a 15-second interval."
+  }
+]

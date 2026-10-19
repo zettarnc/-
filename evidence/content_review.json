@@ -1,0 +1,14 @@
+{
+  "notes_sha256": "b52c10a08d669c3bb3b5e6e7390b4bf3b3758700390d0874accc7d6688b9792a",
+  "raw_subtitle_sha256": "72698b10d62e49c2be1b300f448ffc7bf29d100bc818d967845f80674813248d",
+  "topic_review": "PASS",
+  "scope": "Agent compared transcript topics across all 21 five-minute windows with the notes, inspected 41 contact-sheet samples and opened all 12 included cropped source figures. Full 6013.205-second media was captured; ASR processed every contiguous 20-second window. No word-by-word acoustic audit or every-frame visual audit.",
+  "judgments": [
+    "Raw SenseVoice output is preserved, including recognition errors in Git/GitHub and English names; normalized technical terms in notes were checked against source screens and the official lecture.",
+    "Model capability and labor-market statements are attributed classroom opinions, not independently verified predictions.",
+    "The 1000x closing scenario is a thought experiment, confirmed by the final audio window and slide.",
+    "The init screenshot shows staging before the first commit, not proof of an existing commit.",
+    "Classroom software demonstrations are described as demonstrations and were not independently reproduced.",
+    "Rebase/linear history explanation includes explicitly identified supplementary explanation."
+  ]
+}
