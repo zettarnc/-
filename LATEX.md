@@ -20,7 +20,7 @@ python build_latex.py notes/software-repository-management.md output/pdf/softwar
 
 ```bash
 sudo apt-get update
-sudo apt-get install -y --no-install-recommends pandoc texlive-xetex texlive-lang-chinese texlive-latex-extra texlive-fonts-recommended tex-gyre lmodern
+sudo apt-get install -y --no-install-recommends pandoc texlive-xetex texlive-lang-chinese texlive-latex-extra texlive-fonts-recommended tex-gyre lmodern fonts-texgyre fonts-texgyre-math fonts-lmodern
 python -m pip install -r requirements-latex.txt
 python verify_published.py
 python build_latex.py notes/software-repository-management.md output/pdf/software-repository-management.pdf --engine xelatex
