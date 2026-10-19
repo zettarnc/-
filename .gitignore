@@ -6,3 +6,4 @@ github-publish/
 __pycache__/
 *.pyc
 *.cookies.txt
+tmp/

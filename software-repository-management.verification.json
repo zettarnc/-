@@ -1,0 +1,19 @@
+{
+  "source": "software-repository-management.md",
+  "output": "software-repository-management.pdf",
+  "source_sha256": "1c6c4c93b1279d5f0f1f289c1358731c4bfdebe760e130d09b862b189cb3a110",
+  "pdf_sha256": "ead7efa5987082bd05ec0355258fc551099fb30b2026c5ac516c62f053c2a9e1",
+  "pages": 5,
+  "searchable_title": true,
+  "format_check": "PASS",
+  "visual_review": "PASS",
+  "video_evidence_review": "not_performed_by_this_converter",
+  "visual_review_pages": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "visual_review_method": "All PDF pages rendered using Poppler and inspected for Chinese glyphs, clipping, tables, code, headers and footers"
+}

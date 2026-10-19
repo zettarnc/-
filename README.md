@@ -2,6 +2,8 @@
 
 把课程视频整理为可以独立阅读、能回查来源的中文 Markdown 讲义，并按需生成 PDF。
 
+**PDF 导出已接通。** [直接阅读本次 5 页 PDF](software-repository-management.pdf)，或查看 [本地一键导出与 GitHub 自动构建](PDF.md)。
+
 - [全流程操作手册](WORKFLOW.md)：环境准备、采集、编写、核验和上传。
 - [Agent 执行任务书](TASK.md)：替换输入后交给编码 Agent 使用。
 - [示例讲义：软件仓库管理](notes/software-repository-management.md)：根据本次课程的公开字幕整理稿和官方讲义编写。
@@ -16,7 +18,8 @@
 | 全流程文档、任务书、示例讲义 | 已编写 |
 | 示例依据 | 公开字幕整理稿及官方讲义；字幕尚未完成人工校对 |
 | 本地原视频下载、完整时间轴字幕和画面核验 | 尚未完成，不能视为已跑通视频流水线 |
-| LaTeX / PDF | 本次未生成 |
+| PDF | 已通过 ReportLab 从 Markdown 生成 5 页成品，全部页面已视觉检查 |
+| 自动导出 | 提供 build_pdf.ps1、Python 转换器与 GitHub Actions；LaTeX 路线未部署 |
 | GitHub 目标 | https://github.com/zettarnc/- ，上传结果以远端实际提交为准 |
 
 `prepare.ps1` 是本项目新增的采集脚本，不是上游项目的一键生成入口。正文重组与语义核验需要具备读图能力的 Agent 或人工完成，下载成功不代表讲义可信。

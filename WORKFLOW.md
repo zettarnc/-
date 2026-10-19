@@ -195,7 +195,11 @@ python .\validate_markdown.py .\notes\software-repository-management.md
 
 按 3–5 分钟窗口做时间轴覆盖检查，是有完整 SRT 和视频时的后续核验。只有公开整理稿的交付必须如实标注证据限制。
 
-## 10. 可选 PDF 分支
+## 10. PDF 输出分支
+
+本项目已接通 **Markdown → ReportLab → PDF**：运行 `build_pdf.ps1` 即可导出，具体环境、命令和 GitHub 自动构建见 [PDF.md](PDF.md)。当前《软件仓库管理》示例已生成 5 页中文 PDF，逐页视觉检查通过。这条路线不依赖 XeLaTeX，不运行上游的 `verify_notes.py`；它的检查记录与上游门禁分别报告。
+
+下面保留上游的 LaTeX 路线，供有公式和更复杂版式的课程使用。
 
 需要完整复现参考项目时，继续用其完整 Skill 编写 `notes.tex`，准备它要求的原始视频、最终 SRT、几何记录、配图清单、知识点和数字核对表。不要直接把本 Markdown 示例标为通过其生产门禁。
 
@@ -248,7 +252,7 @@ git push -u origin codex/lecture-notes-workflow
 
 已完成：参考资料阅读、上游版本和 CLI 参数核对、本流程文档、采集脚本、Markdown 基础检查器、课程示例讲义。
 
-未完成：原视频完整采集、原始时间轴字幕导出、逐图核验、PDF 编译与上游生产门禁。因此本次是一套流程交付和有来源说明的 Markdown 示例，不能称为已完成端到端视频验证。用户指定的上传目标为 https://github.com/zettarnc/- ，是否已发布以该仓库的实际提交为准。
+PDF 更新：Markdown 导出、本地生成入口已实际运行，5 页示例全部页面视觉检查通过，并提供 GitHub Actions 自动构建配置。未完成的是原视频完整采集、原始时间轴字幕导出、逐图核验和上游 LaTeX 生产门禁，不能称为完成端到端视频验证。用户指定的上传目标为 https://github.com/zettarnc/- ，是否已发布以该仓库的实际提交为准。
 
 常见阻塞：B 站 412 或无字幕先查提取器版本与登录态；Python 安装报代理错误先修网络；浏览器已登录但下载器不可用时检查是否同一浏览器配置；没有可用字幕也没有 ASR 时明确停止完整讲义验收，不用网页摘要顶替原视频证据。
 
