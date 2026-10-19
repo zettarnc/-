@@ -14,9 +14,17 @@ def digest(path):
 
 
 def verify(root):
-    evidence = root / 'evidence'
+    reports = sorted((root / 'evidence').rglob('source-verification.json'))
+    assert reports, 'No source review reports found'
+    for report_path in reports:
+        verify_lecture(root, report_path.parent)
+
+
+def verify_lecture(root, evidence):
     report = json.loads((evidence / 'source-verification.json').read_text(encoding='utf-8'))
-    notes = root / 'notes' / 'software-repository-management.md'
+    notes_name = report.get('notes_file', 'software-repository-management.md')
+    assert Path(notes_name).name == notes_name, 'Invalid notes file path'
+    notes = root / 'notes' / notes_name
     figures = json.loads((evidence / 'figures.json').read_text(encoding='utf-8'))
     assert report['status'] == 'PASS', 'Source review has not passed'
     assert digest(notes) == report['notes_sha256'], 'Notes changed after source review'
@@ -24,7 +32,7 @@ def verify(root):
     for figure in figures:
         assert digest(notes.parent / figure['figure']) == figure['sha256'], f'Changed figure: {figure["figure"]}'
         assert figure['visual_review'] == 'PASS', f'Figure review missing: {figure["figure"]}'
-    print(f'Published source review PASS: {len(figures)} figures, {report["timeline_review_windows"]} timeline windows')
+    print(f'Published source review PASS: {notes.name}, {len(figures)} figures, {report["timeline_review_windows"]} timeline windows')
 
 
 if __name__ == '__main__':

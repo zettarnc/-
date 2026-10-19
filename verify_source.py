@@ -79,6 +79,7 @@ def verify(workdir, notes, evidence):
         'last_audio_window_end': asr['last_segment_end'], 'timestamp_precision': asr['timestamp_precision'],
         'timeline_review_windows': len(windows), 'reviewed_figures': len(figures),
         'notes_sha256': digest(notes), 'raw_subtitle_sha256': digest(workdir / 'audio_sensevoice_raw.srt'),
+        'notes_file': notes.name,
         'review_scope': review['scope'],
         'limitations': ['Not a word-by-word acoustic audit', 'Not an inspection of every video frame',
                         'Classroom software demonstrations were not independently reproduced'],

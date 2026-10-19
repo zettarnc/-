@@ -37,7 +37,7 @@ def run(args):
         raise SystemExit('\n'.join(errors))
     verify(work, notes, evidence)
     build(argparse.Namespace(source=notes, output=args.output, engine=args.engine,
-                             engine_path=args.engine_path, pandoc=args.pandoc))
+                             engine_path=args.engine_path, pandoc=args.pandoc, evidence=evidence))
     print('Source checks and PDF conversion PASS. Render and review every PDF page before publishing.')
 
 
