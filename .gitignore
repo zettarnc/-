@@ -1,0 +1,8 @@
+.venv/
+work/
+vendor/
+reference/
+github-publish/
+__pycache__/
+*.pyc
+*.cookies.txt
